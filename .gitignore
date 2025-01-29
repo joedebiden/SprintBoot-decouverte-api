@@ -32,5 +32,3 @@ build/
 ### VS Code ###
 .vscode/
 
-### Credentials pgsql ###
-/src/main/resources/application.properties
