@@ -28,6 +28,13 @@ public class StudentService {
             throw new IllegalStateException("Student with email " + student.getEmail() + " already exists");
         }
         studentRepository.save(student);
+    }
 
+    public void deleteStudent(Integer studentId) {
+        boolean exists = studentRepository.existsById(studentId);
+        if (!exists) {
+            throw new IllegalStateException("Student with id " + studentId + " does not exist");
+        }
+        studentRepository.deleteById(studentId);
     }
 }
